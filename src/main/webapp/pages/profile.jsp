@@ -92,7 +92,7 @@
                         <li>
                             <a class="profile-pic" href="#">
                                 <img src="./admin-dashboard/plugins/images/users/varun.jpg" alt="user-img" width="36"
-                                    class="img-circle"><span class="text-white font-medium">Steave</span></a>
+                                    class="img-circle"><span class="text-white font-medium">Jenny Rajakaruna</span></a>
                         </li>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
@@ -183,14 +183,11 @@
                                 </div>
                             </div>
                             <div class="user-btm-box mt-5 d-md-flex">
-                                <div class="col-md-4 col-sm-4 text-center">
-                                    <h1>258</h1>
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <h1>Topics</h1>
                                 </div>
-                                <div class="col-md-4 col-sm-4 text-center">
+                                <div class="col-md-6 col-sm-6 text-center">
                                     <h1>125</h1>
-                                </div>
-                                <div class="col-md-4 col-sm-4 text-center">
-                                    <h1>556</h1>
                                 </div>
                             </div>
                         </div>
@@ -228,24 +225,7 @@
                                                 class="form-control p-0 border-0">
                                         </div>
                                     </div>
-                                    <div class="form-group mb-4">
-                                        <label class="col-md-12 p-0">Message</label>
-                                        <div class="col-md-12 border-bottom p-0">
-                                            <textarea rows="5" class="form-control p-0 border-0"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <label class="col-sm-12">Select Country</label>
-                                        <div class="col-sm-12 border-bottom">
-                                            <select class="form-control p-0 border-0">
-                                                <option>London</option>
-                                                <option>India</option>
-                                                <option>Usa</option>
-                                                <option>Canada</option>
-                                                <option>Thailand</option>
-                                            </select>
-                                        </div>
-                                    </div>
+
                                     <div class="form-group mb-4">
                                         <div class="col-sm-12">
                                             <button class="btn btn-success">Update Profile</button>
