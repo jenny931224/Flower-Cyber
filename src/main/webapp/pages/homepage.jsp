@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
@@ -7,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <title>Flower Cyber</title>
+    <title>Flower Cyber - Admin</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -27,6 +28,8 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+
 </head>
 <!-- body -->
 <body class="main-layout">
@@ -54,10 +57,11 @@
                             <nav class="main-menu">
                                 <ul class="menu-area-main">
                                     <li class="active"><a href="#">Home</a></li>
-                                    <li><a href="#about">About</a></li>
                                     <li><a href="#plant">Plant</a></li>
                                     <li><a href="#gallery">Gallery</a></li>
                                     <li><a href="#contact">Contact Us</a></li>
+                                    <li><a href="/login" id="myBtn">Login</a></li>
+                                    <li><a href="/dashboard">Settings</a></li>
                                     <li class="last"><a href="#"><img src="images/search_icon.png" alt="icon"/></a></li>
                                 </ul>
                             </nav>
@@ -437,11 +441,13 @@
             </div>
             <div class="copyright">
                 <div class="container">
-                    <p>Copyright 2019 All Rights Reserved Design By <a href="https://html.design/">Free Html
-                        Templates</a></p>
+                    <p>Copyright 2020 All Rights Reserved By Flower Cyber</a></p>
                 </div>
             </div>
         </div>
+
+
+
     </footer>
     <!-- end footer -->
     <!-- Javascript files-->
@@ -473,5 +479,8 @@
         });
 
     </script>
+
+
+
 </body>
 </html>
