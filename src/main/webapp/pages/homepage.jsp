@@ -460,7 +460,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 paddimg-right">
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                            <form class="form_a" action="/feedback">
+                            <form class="form_a" action="/feedback" method="post">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <input class="form-control" placeholder="Name" type="text" name="username">
@@ -550,7 +550,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="/addcomments">
+                        <form action="/addcomments" method="post">
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-label">Your Name:</label>
                                 <input type="hidden" class="form-control" value="1" name="topicid">

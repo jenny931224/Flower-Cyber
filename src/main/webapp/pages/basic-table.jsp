@@ -403,9 +403,10 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="/addTopic">
+                            <form action="/addTopic" method="post">
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Topic Name:</label>
+                                    <input type="hidden" class="form-control" id="id" name="id">
                                     <input type="text" class="form-control" id="recipient-name" name="name">
                                 </div>
                                 <div class="form-group">
@@ -414,8 +415,9 @@
                                 </div>
                                 <div class="form-group">
                                 <div class="row">
-                                    <form action="multiupload.php" method="post" enctype="multipart/form-data">
+                                    <form action="/uploadImages" method="post" enctype="multipart/form-data">
                                         <div class="col-md-6">
+                                            <input type="hidden" class="form-control" id="id" name="id">
                                             <input type="file" class="form-control" id="images" name="images[]" onchange="preview_images();" multiple/>
                                         </div>
                                         <div class="col-md-6">
@@ -448,9 +450,10 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="/editTopic">
+                            <form action="/editTopic" method="post">
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Topic Name:</label>
+                                    <input type="hidden" class="form-control" id="id" name="id">
                                     <input type="text" class="form-control" id="topic-name" name="name">
                                 </div>
                                 <div class="form-group">
@@ -459,8 +462,9 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
-                                        <form action="multiupload.php" method="post" enctype="multipart/form-data">
+                                        <form action="/uploadImages" method="post" enctype="multipart/form-data">
                                             <div class="col-md-6">
+                                                <input type="hidden" class="form-control" id="id" name="id">
                                                 <input type="file" class="form-control" id="images" name="images[]" onchange="preview_images();" multiple/>
                                             </div>
                                             <div class="col-md-6">

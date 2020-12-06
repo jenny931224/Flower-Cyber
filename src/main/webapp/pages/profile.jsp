@@ -118,7 +118,7 @@
                                 href="/dashboard" aria-expanded="false"><i class="fas fa-clock fa-fw"
                                     aria-hidden="true"></i><span class="hide-menu">Dashboard</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="/profile" aria-expanded="false">
+                                href="/profile?userid=1" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Profile Settings</span></a>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
@@ -197,31 +197,40 @@
                     <div class="col-lg-8 col-xlg-9 col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <form class="form-horizontal form-material" action="/updateUser">
+                                <form class="form-horizontal form-material" action="/updateUser" method="post">
                                     <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Full Name</label>
                                         <div class="col-md-12 border-bottom p-0">
-                                            <input type="text" placeholder="Johnathan Doe" name="fullname"
+                                            <input type="hidden" placeholder="Johnathan Doe" name="userid" value="${users.userid}">
+                                            <input type="text" placeholder="Johnathan Doe" name="fullname" value="${users.fullname}"
                                                 class="form-control p-0 border-0"> </div>
                                     </div>
+
+                                    <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">User Name</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                            <input type="text" placeholder="Johnathan Doe" name="username" value="${users.username}"
+                                                class="form-control p-0 border-0"> </div>
+                                    </div>
+
                                     <div class="form-group mb-4">
                                         <label for="example-email" class="col-md-12 p-0">Email</label>
                                         <div class="col-md-12 border-bottom p-0">
                                             <input type="email" placeholder="jenny@admin.com"
-                                                class="form-control p-0 border-0" name="email"
+                                                class="form-control p-0 border-0" name="email" value="${users.email}"
                                                 id="example-email">
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Password</label>
                                         <div class="col-md-12 border-bottom p-0">
-                                            <input type="password" name="password" value="password" class="form-control p-0 border-0">
+                                            <input type="password" name="password" value="${users.password}" class="form-control p-0 border-0">
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Phone No</label>
                                         <div class="col-md-12 border-bottom p-0">
-                                            <input type="text" placeholder="077 9999999" name="phone"
+                                            <input type="text" placeholder="077 9999999" name="phone" value="${users.phone}"
                                                 class="form-control p-0 border-0">
                                         </div>
                                     </div>

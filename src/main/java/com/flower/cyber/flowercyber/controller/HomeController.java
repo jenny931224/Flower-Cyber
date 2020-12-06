@@ -21,10 +21,10 @@ public class HomeController {
         return "dashboard";
     }
 
-    @RequestMapping("profile")
-    public String loadAdminDashboardProfile(){
-        return "profile";
-    }
+//    @RequestMapping("profile")
+//    public String loadAdminDashboardProfile(){
+//        return "profile";
+//    }
 
     @RequestMapping("topics")
     public String loadAdminDashboardTopics(){
