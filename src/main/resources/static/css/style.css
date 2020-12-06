@@ -1793,9 +1793,10 @@ img.zoom {
 .modal-title {
      color: #000;
 }
+/**
 .modal-footer {
      display: none;
-}
+}**/
 
 /** end section **/
 .margin-r-l {
@@ -1884,7 +1885,9 @@ img.zoom {
 .map_section figure {
      margin: 0px;
 }
-form {
+
+
+.form_a {
      background: #308409;
      padding: 35px 30px;
 }

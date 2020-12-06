@@ -425,7 +425,7 @@
                                             <input type="file" class="form-control" id="images" name="images[]" onchange="preview_images();" multiple/>
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="submit" class="btn btn-primary" name='submit_image' value="Upload Multiple Image"/>
+                                            <input type="submit" class="btn btn-primary" name='submit_image' value="Upload Topic Images"/>
                                         </div>
                                     </form>
                                 </div>
@@ -437,7 +437,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Send message</button>
+                            <button type="button" class="btn btn-primary">Create</button>
                         </div>
                     </div>
                 </div>

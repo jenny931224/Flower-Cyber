@@ -87,10 +87,10 @@
                     <div class="row marginii">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <div class="carousel-caption ">
-                                <h1>Welcome To The <strong class="color">Nutrients Plants</strong></h1>
-                                <p>It is a long established fact that a reader will be distracted by the readable
-                                    content of a page when looking at its layout. The point of using Lorem Ipsum is that
-                                    it has a more-or-less normal distribution of letters, as opposed to using</p>
+                                <h1>Welcome To The <strong class="color">Flower Seed Planting Guide Application</strong></h1>
+                                <p>Various studies have shown that temperature, climate and solar radiation are some of the
+                                    important factors that determine harvest. This application will suggest the information
+                                    resources and support services for the flower planters. </p>
                                 <a class="btn btn-lg btn-primary" href="#" role="button">About</a>
                                 <a class="btn btn-lg btn-primary" href="#" role="button">Contact US</a>
                             </div>
@@ -108,10 +108,10 @@
                     <div class="row marginii">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <div class="carousel-caption ">
-                                <h1>Welcome To The <strong class="color">Nutrients Plants</strong></h1>
-                                <p>It is a long established fact that a reader will be distracted by the readable
-                                    content of a page when looking at its layout. The point of using Lorem Ipsum is that
-                                    it has a more-or-less normal distribution of letters, as opposed to using</p>
+                                <h1>Welcome To The <strong class="color">Flower Seed Planting Guide Application</strong></h1>
+                                <p>Various studies have shown that temperature, climate and solar radiation are some of the
+                                    important factors that determine harvest. This application will suggest the information
+                                    resources and support services for the flower planters. </p>
                                 <a class="btn btn-lg btn-primary" href="#" role="button">About</a>
                                 <a class="btn btn-lg btn-primary" href="#" role="button">Contact US</a>
                             </div>
@@ -129,10 +129,10 @@
                     <div class="row marginii">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <div class="carousel-caption ">
-                                <h1>Welcome To The <strong class="color">Nutrients Plants</strong></h1>
-                                <p>It is a long established fact that a reader will be distracted by the readable
-                                    content of a page when looking at its layout. The point of using Lorem Ipsum is that
-                                    it has a more-or-less normal distribution of letters, as opposed to using</p>
+                                <h1>Welcome To The <strong class="color">Flower Seed Planting Guide Application</strong></h1>
+                                <p>Various studies have shown that temperature, climate and solar radiation are some of the
+                                    important factors that determine harvest. This application will suggest the information
+                                    resources and support services for the flower planters. </p>
                                 <a class="btn btn-lg btn-primary" href="#" role="button">About</a>
                                 <a class="btn btn-lg btn-primary" href="#" role="button">Contact US</a>
                             </div>
@@ -160,7 +160,7 @@
             <div class="col-md-12 ">
                 <div class="titlepage">
                     <h2>Our Wonderful plants</h2>
-                    <span>looking at its layout. The point of using Lorem Ipsumletters, as opposed to usingl</span>
+                    <span>Plant seeds with high hopes of getting a bountiful harvest and oftentimes</span>
                 </div>
             </div>
         </div>
@@ -170,49 +170,143 @@
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
                     <figure><img src="images/plant1.jpg" alt="img"/></figure>
-                    <h3> Floral Vibrant</h3>
+                    <h3> Floral Sun-Flower</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page
                         when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+
+                    <div class="container" style="padding-bottom: 15px">
+                        <div class="row">
+                            <div class="col text-center">
+
+                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#viewComments" data-whatever="@getbootstrap"
+                                   class="btn btn-outline-primary" type="button">View Comments</a>
+
+                            </div>
+
+                            <div class="col text-center">
+                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                   class="btn btn-outline-dark" type="button">Add Comment</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
                     <figure><img src="images/plant2.jpg" alt="img"/></figure>
-                    <h3> Floral Vibrant</h3>
+                    <h3> Floral Orange</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page
                         when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+
+                    <div class="container" style="padding-bottom: 15px">
+                        <div class="row">
+                            <div class="col text-center">
+                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#viewComments" data-whatever="@getbootstrap"
+                                   class="btn btn-outline-primary" type="button">View Comments</a>
+                            </div>
+
+                            <div class="col text-center">
+                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                   class="btn btn-outline-dark" type="button">Add Comment</a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
                     <figure><img src="images/plant3.jpg" alt="img"/></figure>
-                    <h3> Floral Vibrant</h3>
+                    <h3> Floral Orchid</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page
                         when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+
+                    <div class="container" style="padding-bottom: 15px">
+                        <div class="row">
+                            <div class="col text-center">
+                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#viewComments" data-whatever="@getbootstrap"
+                                   class="btn btn-outline-primary" type="button">View Comments</a>
+                            </div>
+
+                            <div class="col text-center">
+                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                   class="btn btn-outline-dark" type="button">Add Comment</a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
                     <figure><img src="images/plant1.jpg" alt="img"/></figure>
-                    <h3> Floral Vibrant</h3>
+                    <h3> Floral Sun-Flower</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page
                         when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+
+                    <div class="container" style="padding-bottom: 15px">
+                        <div class="row">
+                            <div class="col text-center">
+                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#viewComments" data-whatever="@getbootstrap"
+                                   class="btn btn-outline-primary" type="button">View Comments</a>
+                            </div>
+
+                            <div class="col text-center">
+                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                   class="btn btn-outline-dark" type="button">Add Comment</a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
                     <figure><img src="images/plant2.jpg" alt="img"/></figure>
-                    <h3> Floral Vibrant</h3>
+                    <h3> Floral Orange</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page
                         when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+
+                    <div class="container" style="padding-bottom: 15px">
+                        <div class="row">
+                            <div class="col text-center">
+                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#viewComments" data-whatever="@getbootstrap"
+                                   class="btn btn-outline-primary" type="button">View Comments</a>
+                            </div>
+
+                            <div class="col text-center">
+                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                   class="btn btn-outline-dark" type="button">Add Comment</a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
                     <figure><img src="images/plant3.jpg" alt="img"/></figure>
-                    <h3> Floral Vibrant</h3>
+                    <h3> Floral Orchid</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page
                         when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+
+                    <div class="container" style="padding-bottom: 15px">
+                        <div class="row">
+                            <div class="col text-center">
+                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#viewComments" data-whatever="@getbootstrap"
+                                   class="btn btn-outline-primary" type="button">View Comments</a>
+                            </div>
+
+                            <div class="col text-center">
+                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                   class="btn btn-outline-dark" type="button">Add Comment</a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -366,7 +460,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 paddimg-right">
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                            <form>
+                            <form class="form_a">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <input class="form-control" placeholder="Name" type="text" name="Name">
@@ -382,7 +476,7 @@
                                                   name="Message"></textarea>
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <a href="#">Read More</a>
+                                        <a href="#">Submit</a>
                                     </div>
                                 </div>
                             </form>
@@ -417,8 +511,8 @@
                         <div class="footer-box">
                             <div class="headinga">
                                 <h3>Address</h3>
-                                <span>Demo Store .New York  United States</span>
-                                <p>(+71 98765348)</p>
+                                <span>Moratuwa .Colombo Sri Lanka</span>
+                                <p>(071 9999999)</p>
                             </div>
                             <ul class="location_icon">
                                 <li><a href="#"><img src="icon/facebook.png"></a></li>
@@ -446,7 +540,90 @@
             </div>
         </div>
 
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel"><strong>Add Comment</strong></h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Your Name:</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="col-form-label">Comment:</label>
+                                <textarea class="form-control" id="message-text" placeholder="Add your comment here.."></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger">Close</button>
+                        <button type="button" class="btn btn-outline-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+
+        <div class="modal fade" id="viewComments" tabindex="-1" role="dialog" aria-labelledby="viewCommentsLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="viewCommentsLabel"><strong>View Comments</strong></h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                            <div class="my-3 p-3 bg-white rounded box-shadow">
+                                <h6 class="border-bottom border-gray pb-2 mb-0">Recent Comments</h6>
+                                <div class="media text-muted pt-3">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="mr-2 rounded" width="32" height="32">
+                                    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                        <strong class="d-block text-gray-dark">@username</strong>
+                                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                                    </p>
+                                    <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Delete</button>
+                                </div>
+                                <div class="media text-muted pt-3">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="mr-2 rounded" width="32" height="32">
+                                    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                        <strong class="d-block text-gray-dark">@username</strong>
+                                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                                    </p>
+                                    <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Delete</button>
+                                </div>
+                                <div class="media text-muted pt-3">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="" class="mr-2 rounded" width="32" height="32">
+                                    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                        <strong class="d-block text-gray-dark">@username</strong>
+                                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                                    </p>
+                                    <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Delete</button>
+                                </div>
+                                <div class="media text-muted pt-3">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" class="mr-2 rounded" width="32" height="32">
+                                    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                        <strong class="d-block text-gray-dark">@username</strong>
+                                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                                    </p>
+                                    <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Delete</button>
+                                </div>
+                            </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </footer>
     <!-- end footer -->
