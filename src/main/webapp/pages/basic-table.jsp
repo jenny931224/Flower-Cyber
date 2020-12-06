@@ -262,10 +262,10 @@
                                                     <div class="d-md-flex">
                                                         <ol class="breadcrumb ml-auto">
                                                         </ol>
-                                                        <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                                        <a target="_blank" data-toggle="modal"  data-target="#editTopic" data-whatever="@getbootstrap"
                                                            class="btn btn-outline-dark  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Edit</a>
 
-                                                        <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                                        <a href="/deleteTopic"
                                                            class="btn btn-outline-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Delete</a>
 
 
@@ -284,12 +284,11 @@
                                                     <div class="d-md-flex">
                                                         <ol class="breadcrumb ml-auto">
                                                         </ol>
-                                                        <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                                        <a target="_blank" data-toggle="modal"  data-target="#editTopic" data-whatever="@getbootstrap"
                                                            class="btn btn-outline-dark  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Edit</a>
 
-                                                        <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                                        <a href="/deleteTopic"
                                                            class="btn btn-outline-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Delete</a>
-
 
                                                     </div>
                                                 </div>
@@ -305,12 +304,11 @@
                                                     <div class="d-md-flex">
                                                         <ol class="breadcrumb ml-auto">
                                                         </ol>
-                                                        <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                                        <a target="_blank" data-toggle="modal"  data-target="#editTopic" data-whatever="@getbootstrap"
                                                            class="btn btn-outline-dark  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Edit</a>
 
-                                                        <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                                        <a href="/deleteTopic"
                                                            class="btn btn-outline-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Delete</a>
-
 
                                                     </div>
                                                 </div>
@@ -326,13 +324,11 @@
                                                     <div class="d-md-flex">
                                                         <ol class="breadcrumb ml-auto">
                                                         </ol>
-                                                        <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                                        <a target="_blank" data-toggle="modal"  data-target="#editTopic" data-whatever="@getbootstrap"
                                                            class="btn btn-outline-dark  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Edit</a>
 
-                                                        <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                                        <a href="/deleteTopic"
                                                            class="btn btn-outline-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Delete</a>
-
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -347,12 +343,11 @@
                                                     <div class="d-md-flex">
                                                         <ol class="breadcrumb ml-auto">
                                                         </ol>
-                                                        <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                                        <a target="_blank" data-toggle="modal"  data-target="#editTopic" data-whatever="@getbootstrap"
                                                            class="btn btn-outline-dark  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Edit</a>
 
-                                                        <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                                        <a href="/deleteTopic"
                                                            class="btn btn-outline-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Delete</a>
-
 
                                                     </div>
                                                 </div>
@@ -368,12 +363,11 @@
                                                     <div class="d-md-flex">
                                                         <ol class="breadcrumb ml-auto">
                                                         </ol>
-                                                        <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                                        <a target="_blank" data-toggle="modal"  data-target="#editTopic" data-whatever="@getbootstrap"
                                                            class="btn btn-outline-dark  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Edit</a>
 
-                                                        <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
+                                                        <a href="/deleteTopic"
                                                            class="btn btn-outline-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Delete</a>
-
 
                                                     </div>
                                                 </div>
@@ -409,14 +403,14 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form action="/addTopic">
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Topic Name:</label>
-                                    <input type="text" class="form-control" id="recipient-name">
+                                    <input type="text" class="form-control" id="recipient-name" name="name">
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">Topic Description:</label>
-                                    <textarea class="form-control" id="message-text"></textarea>
+                                    <textarea class="form-control" id="message-text" name="description"></textarea>
                                 </div>
                                 <div class="form-group">
                                 <div class="row">
@@ -437,7 +431,52 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Create</button>
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="editTopic" tabindex="-1" role="dialog" aria-labelledby="editTopicLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="editTopicLabel"><strong>Edit Topic</strong></h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/editTopic">
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Topic Name:</label>
+                                    <input type="text" class="form-control" id="topic-name" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Topic Description:</label>
+                                    <textarea class="form-control" id="topic-text" name="description"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <form action="multiupload.php" method="post" enctype="multipart/form-data">
+                                            <div class="col-md-6">
+                                                <input type="file" class="form-control" id="images" name="images[]" onchange="preview_images();" multiple/>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="submit" class="btn btn-primary" name='submit_image' value="Upload Topic Images"/>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row" id="image_preview"></div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Create</button>
                         </div>
                     </div>
                 </div>

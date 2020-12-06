@@ -47,7 +47,7 @@
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                     <div class="full">
                         <div class="center-desk">
-                            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="#"></a></div>
+                            <div class="logo"><a href="#"><img src="images/logo.png" alt="#"></a></div>
                         </div>
                     </div>
                 </div>
@@ -460,10 +460,10 @@
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 paddimg-right">
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                            <form class="form_a">
+                            <form class="form_a" action="/feedback">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <input class="form-control" placeholder="Name" type="text" name="Name">
+                                        <input class="form-control" placeholder="Name" type="text" name="username">
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <input class="form-control" placeholder="Email" type="text" name="Email">
@@ -473,10 +473,10 @@
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <textarea class="textarea>" placeholder="Message" type="text"
-                                                  name="Message"></textarea>
+                                                  name="description"></textarea>
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <a href="#">Submit</a>
+                                        <a href="#" type=submit">Submit</a>
                                     </div>
                                 </div>
                             </form>
@@ -550,20 +550,21 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form action="/addcomments">
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-label">Your Name:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <input type="hidden" class="form-control" value="1" name="topicid">
+                                <input type="text" class="form-control" id="recipient-name" name="username">
                             </div>
                             <div class="form-group">
                                 <label for="message-text" class="col-form-label">Comment:</label>
-                                <textarea class="form-control" id="message-text" placeholder="Add your comment here.."></textarea>
+                                <textarea class="form-control" id="message-text" placeholder="Add your comment here.." name="comment"></textarea>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-danger">Close</button>
-                        <button type="button" class="btn btn-outline-primary">Add</button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-outline-primary">Add</button>
                     </div>
                 </div>
             </div>
