@@ -1,7 +1,7 @@
 package com.flower.cyber.flowercyber.service;
 
 import com.flower.cyber.flowercyber.exception.ResourceNotFoundException;
-import com.flower.cyber.flowercyber.model.Users;
+import com.flower.cyber.flowercyber.model.User;
 import com.flower.cyber.flowercyber.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,16 +15,16 @@ public class UserServiceImpl implements UserService{
     private UserRepository userRepository;
 
     @Override
-    public Users addUser(Users user) {
+    public User addUser(User user) {
         return userRepository.save(user);
     }
 
     @Override
-    public Users editUser(Users user) {
-        Optional<Users> userFromDB = this.userRepository.findById(user.getUserid());
+    public User editUser(User user) {
+        Optional<User> userFromDB = this.userRepository.findById(user.getId());
         if(userFromDB.isPresent()){
-            Users usertoUpdate = userFromDB.get();
-            usertoUpdate.setUserid(user.getUserid());
+            User usertoUpdate = userFromDB.get();
+            usertoUpdate.setId(user.getId());
             usertoUpdate.setFullname(user.getFullname());
             usertoUpdate.setEmail(user.getEmail());
             usertoUpdate.setPhone(user.getPhone());
@@ -38,10 +38,11 @@ public class UserServiceImpl implements UserService{
         }
     }
 
-    @Override
-    public Users getUserByID(long userID) {
 
-        Optional<Users> userFromDB = this.userRepository.findById(userID);
+    @Override
+    public User getUserByID(int userID) {
+
+        Optional<User> userFromDB = this.userRepository.findById(userID);
         if(userFromDB.isPresent()){
             return userFromDB.get();
         }else{
@@ -50,8 +51,8 @@ public class UserServiceImpl implements UserService{
     }
 
 
-    public void deleteUser(long userid){
-        Optional<Users> userFromDB = this.userRepository.findById(userid);
+    public void deleteUser(int userid){
+        Optional<User> userFromDB = this.userRepository.findById(userid);
         if(userFromDB.isPresent()){
             this.userRepository.delete(userFromDB.get());
         }else{

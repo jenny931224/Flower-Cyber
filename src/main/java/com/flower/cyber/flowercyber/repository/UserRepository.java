@@ -1,9 +1,13 @@
 package com.flower.cyber.flowercyber.repository;
 
-import com.flower.cyber.flowercyber.model.Users;
+import com.flower.cyber.flowercyber.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
 
 
-public interface UserRepository extends JpaRepository<Users,Long> {
+@Repository
+public interface UserRepository extends JpaRepository<User,Integer> {
+    Optional<User> findByUserName(String username);
 }

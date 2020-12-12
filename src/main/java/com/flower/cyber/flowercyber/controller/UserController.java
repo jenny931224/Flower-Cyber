@@ -1,6 +1,6 @@
 package com.flower.cyber.flowercyber.controller;
 
-import com.flower.cyber.flowercyber.model.Users;
+import com.flower.cyber.flowercyber.model.User;
 import com.flower.cyber.flowercyber.repository.UserRepository;
 import com.flower.cyber.flowercyber.service.UserService;
 import com.flower.cyber.flowercyber.service.UserServiceImpl;
@@ -15,28 +15,26 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class UserController {
 
-//    @Autowired
-//    UserRepository userRepository;
-
     @Autowired
     private UserService userService;
 
     @RequestMapping("/addUser")
-    public String addUser(Users user){
+    public String addUser(User user){
        // userRepository.save(user);
         return "dashboard";
     }
 
     @RequestMapping("/profile")
-    public ModelAndView getUserByID(@RequestParam long userid){
+    public ModelAndView getUserByID(@RequestParam int userid){
+        System.out.println("Test userid :"+userid);
         ModelAndView mv = new ModelAndView("profile");
-        Users users = userService.getUserByID(userid);
-        mv.addObject(users);
+        User users = userService.getUserByID(userid);
+        mv.addObject("user",users);
         return mv;
     }
 
     @RequestMapping(value="/updateUser",method = RequestMethod.POST)
-    public ModelAndView editsave(@ModelAttribute("user") Users user){
+    public ModelAndView editsave(@ModelAttribute("user") User user){
         ModelAndView mv = new ModelAndView("profile");
         userService.editUser(user);
         mv.addObject(user);

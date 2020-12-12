@@ -14,7 +14,7 @@
     <title>Flower Cyber - Admin</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="./admin-dashboard/plugins/images/favicon.png">
+<%--    <link rel="icon" type="image/png" sizes="16x16" href="./admin-dashboard/plugins/images/favicon.png">--%>
     <!-- Custom CSS -->
    <link href="./admin-dashboard/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -168,7 +168,7 @@
                                 href="/dashboard" aria-expanded="false"><i class="fas fa-clock fa-fw"
                                     aria-hidden="true"></i><span class="hide-menu">Dashboard</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="/profile" aria-expanded="false">
+                                href="/profile?userid=${userid}" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Profile Settings</span></a>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
@@ -406,35 +406,36 @@
                             <form action="/addTopic" method="post">
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Topic Name:</label>
-                                    <input type="hidden" class="form-control" id="id" name="id">
-                                    <input type="text" class="form-control" id="recipient-name" name="name">
+                                    <input type="hidden" class="form-control" id="topicid" name="id">
+                                    <input type="text" class="form-control" id="recipient-name" name="topicname">
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">Topic Description:</label>
-                                    <textarea class="form-control" id="message-text" name="description"></textarea>
+                                    <textarea class="form-control" id="message-text" name="topicdescription"></textarea>
                                 </div>
                                 <div class="form-group">
-                                <div class="row">
-                                    <form action="/uploadImages" method="post" enctype="multipart/form-data">
-                                        <div class="col-md-6">
-                                            <input type="hidden" class="form-control" id="id" name="id">
-                                            <input type="file" class="form-control" id="images" name="images[]" onchange="preview_images();" multiple/>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="submit" class="btn btn-primary" name='submit_image' value="Upload Topic Images"/>
-                                        </div>
-                                    </form>
-                                </div>
+<%--                                <div class="row">--%>
+<%--                                    <form action="/uploadImages" method="post" enctype="multipart/form-data">--%>
+<%--                                        <div class="col-md-6">--%>
+<%--                                            <input type="hidden" class="form-control" id="id" name="id">--%>
+<%--                                            <input type="file" class="form-control" id="images" name="images[]" onchange="preview_images();" multiple/>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="col-md-6">--%>
+<%--                                            <input type="submit" class="btn btn-primary" name='submit_image' value="Upload Topic Images"/>--%>
+<%--                                        </div>--%>
+<%--                                    </form>--%>
+<%--                                </div>--%>
                                 </div>
                                 <div class="form-group">
                                     <div class="row" id="image_preview"></div>
                                 </div>
-                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Create</button>
                         </div>
+                        </form>
+
                     </div>
                 </div>
             </div>
@@ -459,22 +460,6 @@
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">Topic Description:</label>
                                     <textarea class="form-control" id="topic-text" name="description"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <form action="/uploadImages" method="post" enctype="multipart/form-data">
-                                            <div class="col-md-6">
-                                                <input type="hidden" class="form-control" id="id" name="id">
-                                                <input type="file" class="form-control" id="images" name="images[]" onchange="preview_images();" multiple/>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="submit" class="btn btn-primary" name='submit_image' value="Upload Topic Images"/>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row" id="image_preview"></div>
                                 </div>
                             </form>
                         </div>

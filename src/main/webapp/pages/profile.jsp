@@ -14,7 +14,7 @@
     <title>Flower Cyber - Admin</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="./admin-dashboard/plugins/images/favicon.png">
+<%--    <link rel="icon" type="image/png" sizes="16x16" href="./admin-dashboard/plugins/images/favicon.png">--%>
     <!-- Custom CSS -->
    <link href="./admin-dashboard/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -91,8 +91,8 @@
                         <!-- ============================================================== -->
                         <li>
                             <a class="profile-pic" href="#">
-                                <img src="./admin-dashboard/plugins/images/users/varun.jpg" alt="user-img" width="36"
-                                    class="img-circle"><span class="text-white font-medium">Jenny Rajakaruna</span></a>
+                                <img src="./admin-dashboard/plugins/images/users/d1.jpg" alt="user-img" width="36"
+                                    class="img-circle"><span class="text-white font-medium">${user.fullname}</span></a>
                         </li>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
@@ -175,19 +175,19 @@
                             <div class="user-bg"> <img width="100%" alt="user" src="./admin-dashboard/plugins/images/large/img1.jpg">
                                 <div class="overlay-box">
                                     <div class="user-content">
-                                        <a href="javascript:void(0)"><img src="./admin-dashboard/plugins/images/users/genu.jpg"
+                                        <a href="javascript:void(0)"><img src="./admin-dashboard/plugins/images/users/d1.jpg"
                                                 class="thumb-lg img-circle" alt="img"></a>
-                                        <h4 class="text-white mt-2">User Name</h4>
-                                        <h5 class="text-white mt-2">info@myadmin.com</h5>
+                                        <h4 class="text-white mt-2">${user.fullname}</h4>
+                                        <h5 class="text-white mt-2">${user.email}</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="user-btm-box mt-5 d-md-flex">
                                 <div class="col-md-6 col-sm-6 text-center">
-                                    <h1>Topics</h1>
+                                    <h1>User ID</h1>
                                 </div>
                                 <div class="col-md-6 col-sm-6 text-center">
-                                    <h1>125</h1>
+                                    <h1>${user.id}</h1>
                                 </div>
                             </div>
                         </div>
@@ -201,15 +201,15 @@
                                     <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Full Name</label>
                                         <div class="col-md-12 border-bottom p-0">
-                                            <input type="hidden" placeholder="Johnathan Doe" name="userid" value="${users.userid}">
-                                            <input type="text" placeholder="Johnathan Doe" name="fullname" value="${users.fullname}"
+                                            <input type="hidden" placeholder="Johnathan Doe" name="id" value="${user.id}">
+                                            <input type="text" placeholder="Johnathan Doe" name="fullname" value="${user.fullname}"
                                                 class="form-control p-0 border-0"> </div>
                                     </div>
 
                                     <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">User Name</label>
                                         <div class="col-md-12 border-bottom p-0">
-                                            <input type="text" placeholder="Johnathan Doe" name="username" value="${users.username}"
+                                            <input type="text" placeholder="Johnathan Doe" name="userName" value="${user.userName}"
                                                 class="form-control p-0 border-0"> </div>
                                     </div>
 
@@ -217,20 +217,20 @@
                                         <label for="example-email" class="col-md-12 p-0">Email</label>
                                         <div class="col-md-12 border-bottom p-0">
                                             <input type="email" placeholder="jenny@admin.com"
-                                                class="form-control p-0 border-0" name="email" value="${users.email}"
+                                                class="form-control p-0 border-0" name="email" value="${user.email}"
                                                 id="example-email">
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Password</label>
                                         <div class="col-md-12 border-bottom p-0">
-                                            <input type="password" name="password" value="${users.password}" class="form-control p-0 border-0">
+                                            <input type="password" name="password" value="${user.password}" class="form-control p-0 border-0">
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Phone No</label>
                                         <div class="col-md-12 border-bottom p-0">
-                                            <input type="text" placeholder="077 9999999" name="phone" value="${users.phone}"
+                                            <input type="text" placeholder="077 9999999" name="phone" value="${user.phone}"
                                                 class="form-control p-0 border-0">
                                         </div>
                                     </div>

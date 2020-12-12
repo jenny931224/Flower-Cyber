@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
@@ -59,9 +59,12 @@
                                     <li class="active"><a href="#">Home</a></li>
                                     <li><a href="#plant">Plant</a></li>
                                     <li><a href="#gallery">Gallery</a></li>
-                                    <li><a href="#contact">Contact Us</a></li>
-                                    <li><a href="/login" id="myBtn">Login</a></li>
-                                    <li><a href="/dashboard">Settings</a></li>
+                                    <li><a href="logout">Contact Us</a></li>
+                                    <li><a href="loginpage" id="myBtn">Login</a></li>
+                                    <c:if test="${role != null}">
+                                        <li><a href="dashboard">Settings</a></li>
+                                    </c:if>
+
                                     <li class="last"><a href="#"><img src="images/search_icon.png" alt="icon"/></a></li>
                                 </ul>
                             </nav>
@@ -165,27 +168,28 @@
             </div>
         </div>
     </div>
+    <c:if test="${topics != null and topics.size()>0}">
     <div class="container">
         <div class="row">
+            <c:forEach items="${topics}" var="topics">
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
-                    <figure><img src="images/plant1.jpg" alt="img"/></figure>
-                    <h3> Floral Sun-Flower</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                    <figure><img src="${topics.imageurl}" alt="img"/></figure>
+                    <h3> ${topics.topicname}</h3>
+                    <p>${topics.topicdescription}</p>
 
                     <div class="container" style="padding-bottom: 15px">
                         <div class="row">
                             <div class="col text-center">
 
-                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#viewComments" data-whatever="@getbootstrap"
-                                   class="btn btn-outline-primary" type="button">View Comments</a>
+                                <button target="_blank" data-toggle="modal"   data-id="${topics.topicid}" value="${topics.topicid}"  id="viewCommentTopicID"  data-whatever="@getbootstrap"
+                                   class="btn btn-outline-primary" type="button">View Comments</button>
 
                             </div>
 
                             <div class="col text-center">
-                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
-                                   class="btn btn-outline-dark" type="button">Add Comment</a>
+                                <button target="_blank" data-toggle="modal"  data-id="${topics.topicid}" data-target="#exampleModal" value="${topics.topicid}"  id="addCommentTopicID"  data-whatever="@getbootstrap"
+                                   class="btn btn-outline-dark" type="button">Add Comment</button>
                             </div>
 
                         </div>
@@ -194,123 +198,12 @@
 
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="plants-box">
-                    <figure><img src="images/plant2.jpg" alt="img"/></figure>
-                    <h3> Floral Orange</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
 
-                    <div class="container" style="padding-bottom: 15px">
-                        <div class="row">
-                            <div class="col text-center">
-                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#viewComments" data-whatever="@getbootstrap"
-                                   class="btn btn-outline-primary" type="button">View Comments</a>
-                            </div>
 
-                            <div class="col text-center">
-                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
-                                   class="btn btn-outline-dark" type="button">Add Comment</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="plants-box">
-                    <figure><img src="images/plant3.jpg" alt="img"/></figure>
-                    <h3> Floral Orchid</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
-
-                    <div class="container" style="padding-bottom: 15px">
-                        <div class="row">
-                            <div class="col text-center">
-                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#viewComments" data-whatever="@getbootstrap"
-                                   class="btn btn-outline-primary" type="button">View Comments</a>
-                            </div>
-
-                            <div class="col text-center">
-                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
-                                   class="btn btn-outline-dark" type="button">Add Comment</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="plants-box">
-                    <figure><img src="images/plant1.jpg" alt="img"/></figure>
-                    <h3> Floral Sun-Flower</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
-
-                    <div class="container" style="padding-bottom: 15px">
-                        <div class="row">
-                            <div class="col text-center">
-                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#viewComments" data-whatever="@getbootstrap"
-                                   class="btn btn-outline-primary" type="button">View Comments</a>
-                            </div>
-
-                            <div class="col text-center">
-                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
-                                   class="btn btn-outline-dark" type="button">Add Comment</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="plants-box">
-                    <figure><img src="images/plant2.jpg" alt="img"/></figure>
-                    <h3> Floral Orange</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
-
-                    <div class="container" style="padding-bottom: 15px">
-                        <div class="row">
-                            <div class="col text-center">
-                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#viewComments" data-whatever="@getbootstrap"
-                                   class="btn btn-outline-primary" type="button">View Comments</a>
-                            </div>
-
-                            <div class="col text-center">
-                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
-                                   class="btn btn-outline-dark" type="button">Add Comment</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="plants-box">
-                    <figure><img src="images/plant3.jpg" alt="img"/></figure>
-                    <h3> Floral Orchid</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
-
-                    <div class="container" style="padding-bottom: 15px">
-                        <div class="row">
-                            <div class="col text-center">
-                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#viewComments" data-whatever="@getbootstrap"
-                                   class="btn btn-outline-primary" type="button">View Comments</a>
-                            </div>
-
-                            <div class="col text-center">
-                                <a href="/home" target="_blank" data-toggle="modal"  data-target="#exampleModal" data-whatever="@getbootstrap"
-                                   class="btn btn-outline-dark" type="button">Add Comment</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </c:forEach>
         </div>
     </div>
+    </c:if>
 </div>
 <!-- end plant -->
 <!-- about -->
@@ -540,35 +433,6 @@
             </div>
         </div>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="exampleModalLabel"><strong>Add Comment</strong></h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="/addcomments" method="post">
-                            <div class="form-group">
-                                <label for="recipient-name" class="col-form-label">Your Name:</label>
-                                <input type="hidden" class="form-control" value="1" name="topicid">
-                                <input type="text" class="form-control" id="recipient-name" name="username">
-                            </div>
-                            <div class="form-group">
-                                <label for="message-text" class="col-form-label">Comment:</label>
-                                <textarea class="form-control" id="message-text" placeholder="Add your comment here.." name="comment"></textarea>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-outline-primary">Add</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
         <div class="modal fade" id="viewComments" tabindex="-1" role="dialog" aria-labelledby="viewCommentsLabel" aria-hidden="true">
@@ -580,44 +444,12 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body" id="modal-body-viewComment">
+                        <div class="my-3 p-3 bg-white rounded box-shadow">
+                            <h6 class="border-bottom border-gray pb-2 mb-0">Recent Comments</h6>
+                            <div id="CommentsModalBody"></div>
 
-                            <div class="my-3 p-3 bg-white rounded box-shadow">
-                                <h6 class="border-bottom border-gray pb-2 mb-0">Recent Comments</h6>
-                                <div class="media text-muted pt-3">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="mr-2 rounded" width="32" height="32">
-                                    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                        <strong class="d-block text-gray-dark">@username</strong>
-                                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                    </p>
-                                    <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Delete</button>
-                                </div>
-                                <div class="media text-muted pt-3">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="mr-2 rounded" width="32" height="32">
-                                    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                        <strong class="d-block text-gray-dark">@username</strong>
-                                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                    </p>
-                                    <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Delete</button>
-                                </div>
-                                <div class="media text-muted pt-3">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="" class="mr-2 rounded" width="32" height="32">
-                                    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                        <strong class="d-block text-gray-dark">@username</strong>
-                                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                    </p>
-                                    <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Delete</button>
-                                </div>
-                                <div class="media text-muted pt-3">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" class="mr-2 rounded" width="32" height="32">
-                                    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                        <strong class="d-block text-gray-dark">@username</strong>
-                                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                    </p>
-                                    <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Delete</button>
-                                </div>
-                            </div>
-
+                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
@@ -626,7 +458,42 @@
             </div>
         </div>
 
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel"><strong>Add Comment</strong></h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form  method="post" id="addCommentForm" >
+                            <div class="form-group">
+                                <label for="topicID" class="col-form-label">Your Name:</label>
+                                <input type="hidden" class="form-control" id="topicID" name="topicID" value="5">
+                                <input type="text"  class="form-control" id="userName" name="userName">
+                            </div>
+                            <div class="form-group">
+                                <label for="commentDescription" class="col-form-label">Comment:</label>
+                                <textarea class="form-control" id="commentDescription" placeholder="Add your comment here.." name="commentDescription"></textarea>
+                            </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-outline-primary">Add</button>
+                    </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <div id="snoAlertBox" class="alert alert-success" data-alert="alert">Now Update your Search</div>
     <!-- end footer -->
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>
@@ -640,24 +507,79 @@
     <!-- javascript -->
     <script src="js/owl.carousel.js"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
     <script>
-        $(document).ready(function () {
-            $(".fancybox").fancybox({
-                openEffect: "none",
-                closeEffect: "none"
+        $(document).ready(function(){
+            $('#addCommentForm').on('submit', function (e) {
+                e.preventDefault();
+                var userName = $('#userName').val();
+                var topicID = $('#addCommentTopicID').val();
+                var commentDescription = $('#commentDescription').val();
+                var formdata = new FormData();
+                formdata.append( 'userName', userName );
+                formdata.append( 'topicID', topicID );
+                formdata.append( 'commentDescription', commentDescription );
+
+                $.ajax({
+                    type: 'post',
+                    url: '/addComment',
+                    data: formdata,
+                    processData: false, //Setting processData to false lets you prevent jQuery from automatically transforming the data into a query string.
+                    contentType: false, //Setting the contentType to false is imperative, since otherwise jQuery will set it incorrectly.
+                    success: function () {
+                       // alert('Comment added Successfully')
+                        $('#exampleModal').modal('hide');
+                    }
+                });
+
             });
 
-            $(".zoom").hover(function () {
+            $('#viewCommentTopicID').on('click', function (e) {
+                e.preventDefault();
+                var topicID = $('#viewCommentTopicID').val();
+//                alert(topicID)
+                $.ajax({
+                    url: "/getCommentsByTopicID",
+                    type: "get", //send it through get method
+                    data: {
+                        topicID: topicID
+                    },
+                    success: function (response) {
+                        //Do Something
+                        // $('#modal-body-viewComment').html(response);
+                        // var obj = JSON.parse(response);
+                        let length = Object.values(response).length;
+                        console.log('length',length)
 
-                $(this).addClass('transition');
-            }, function () {
+                        var html="";
+                        for(var count=0; count < length; count++){
+                            html += ' <div class="media text-muted pt-3" >';
+                            html += ' <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" class="mr-2 rounded" width="32" height="32">';
+                            html += ' <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">';
+                            html += ' <strong class="d-block text-gray-dark">@'+ response[count].userName+'</strong>';
+                            html +=  response[count].commentDescription;
+                            html += ' </p>';
+                            html +=  '<a href="/deleteComment?commentid='+response[count].id+' "class="btn btn-outline-danger btn-sm" >Delete</a>';
+                            html += ' </div>';
+                        }
 
-                $(this).removeClass('transition');
+                        $('#CommentsModalBody').html(html)
+                        $('#viewComments').modal('show');
+                        // Display Modal
+                        // $('#viewComments').modal('show');
+                    },
+                    error: function (xhr) {
+                        //Do Something to handle error
+                    }
+                });
+
             });
+
         });
 
-    </script>
 
+    </script>
 
 
 </body>

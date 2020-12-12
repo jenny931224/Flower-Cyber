@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login V17</title>
+    <title>Flower Cyber Admin Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -34,7 +34,7 @@
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
-            <form class="login100-form validate-form" method="post" action="/adminlogin">
+            <form class="login100-form validate-form" method="post" action="/loginpage">
 					<span class="login100-form-title p-b-34">
 						Admin Login
 					</span>
@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn">
+                    <button class="login100-form-btn" type="submit">
                         Sign in
                     </button>
                 </div>
