@@ -57,14 +57,18 @@
                             <nav class="main-menu">
                                 <ul class="menu-area-main">
                                     <li class="active"><a href="#">Home</a></li>
-                                    <li><a href="#plant">Plant</a></li>
+                                    <li><a href="#plant">Topic</a></li>
                                     <li><a href="#gallery">Gallery</a></li>
-                                    <li><a href="logout">Contact Us</a></li>
-                                    <li><a href="loginpage" id="myBtn">Login</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                    <c:if test="${role == null}">
+                                        <li><a href="loginpage" id="myBtn">Login</a></li>
+                                    </c:if>
                                     <c:if test="${role != null}">
                                         <li><a href="dashboard">Settings</a></li>
                                     </c:if>
-
+                                    <c:if test="${role != null}">
+                                        <li><a href="logout">Logout</a></li>
+                                    </c:if>
                                     <li class="last"><a href="#"><img src="images/search_icon.png" alt="icon"/></a></li>
                                 </ul>
                             </nav>
@@ -174,7 +178,7 @@
             <c:forEach items="${topics}" var="topics">
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
-                    <figure><img src="${topics.imageurl}" alt="img"/></figure>
+                    <figure><img src="images/${topics.topicid}/${topics.imageurl}" alt="img"/></figure>
                     <h3> ${topics.topicname}</h3>
                     <p>${topics.topicdescription}</p>
 
@@ -182,8 +186,8 @@
                         <div class="row">
                             <div class="col text-center">
 
-                                <button target="_blank" data-toggle="modal"   data-id="${topics.topicid}" value="${topics.topicid}"  id="viewCommentTopicID"  data-whatever="@getbootstrap"
-                                   class="btn btn-outline-primary" type="button">View Comments</button>
+                                <button target="_blank" data-toggle="modal"  data-id="${topics.topicid}" value="${topics.topicid}"  id="viewCommentTopicID"  data-whatever="@getbootstrap"
+                                   class="viewCommentControl btn btn-outline-primary" type="button">View Comments</button>
 
                             </div>
 
@@ -353,23 +357,23 @@
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 paddimg-right">
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                            <form class="form_a" action="/feedback" method="post">
+                            <form class="form_a" action="/addFeedBack" method="post">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <input class="form-control" placeholder="Name" type="text" name="username">
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <input class="form-control" placeholder="Email" type="text" name="Email">
+                                        <input class="form-control" placeholder="Email" type="text" name="email">
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <input class="form-control" placeholder="Phone" type="text" name="Phone">
+                                        <input class="form-control" placeholder="Phone" type="text" name="phone">
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <textarea class="textarea>" placeholder="Message" type="text"
                                                   name="description"></textarea>
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <a href="#" type=submit">Submit</a>
+                                        <input type="submit" class="btn btn-danger">Submit</input>
                                     </div>
                                 </div>
                             </form>
@@ -535,10 +539,10 @@
 
             });
 
-            $('#viewCommentTopicID').on('click', function (e) {
+            $('.viewCommentControl').on('click', function (e) {
                 e.preventDefault();
-                var topicID = $('#viewCommentTopicID').val();
-//                alert(topicID)
+                var topicID = $(this).data('id');
+                console.log('topicID',topicID)
                 $.ajax({
                     url: "/getCommentsByTopicID",
                     type: "get", //send it through get method
@@ -566,8 +570,7 @@
 
                         $('#CommentsModalBody').html(html)
                         $('#viewComments').modal('show');
-                        // Display Modal
-                        // $('#viewComments').modal('show');
+
                     },
                     error: function (xhr) {
                         //Do Something to handle error

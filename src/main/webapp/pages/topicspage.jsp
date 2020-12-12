@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -141,7 +144,7 @@
                         <!-- ============================================================== -->
                         <li>
                             <a class="profile-pic" href="#">
-                                <img src="./admin-dashboard/plugins/images/users/varun.jpg" alt="user-img" width="36"
+                                <img src="./admin-dashboard/plugins/images/users/d1.jpg" alt="user-img" width="36"
                                     class="img-circle"><span class="text-white font-medium">Jenny Rajakaruna</span></a>
                         </li>
                         <!-- ============================================================== -->
@@ -244,7 +247,6 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th class="border-top-0">#</th>
                                             <th class="border-top-0">Topic Id</th>
                                             <th class="border-top-0">Topic Name</th>
                                             <th class="border-top-0">Topic Description</th>
@@ -252,20 +254,22 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <c:if test="${topics != null and topics.size()>0}">
+                                        <c:forEach items="${topics}" var="topics">
                                         <tr>
-                                            <td>1</td>
-                                            <td>Deshmukh</td>
-                                            <td>Prohaska</td>
-                                            <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </td>
+                                            <td>${topics.topicid}</td>
+                                            <td>${topics.topicname}</td>
+                                            <td>${topics.topicdescription}</td>
                                             <td><div class="row">
                                                 <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                                                    <div class="d-md-flex">
+                                                    <div class="d-md-flex" id="buttomListTopic">
                                                         <ol class="breadcrumb ml-auto">
                                                         </ol>
-                                                        <a target="_blank" data-toggle="modal"  data-target="#editTopic" data-whatever="@getbootstrap"
-                                                           class="btn btn-outline-dark  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Edit</a>
-
-                                                        <a href="/deleteTopic"
+                                                        <div class="editTopicControl">
+                                                        <button target="_blank" data-toggle="modal" data-id="${topics.topicid}"  id="editModalAction" data-whatever="@getbootstrap"
+                                                           class="editButtonTopics btn btn-outline-dark  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Edit</button>
+                                                        </div>
+                                                        <a href="/deleteTopic?topicId=${topics.topicid}"
                                                            class="btn btn-outline-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Delete</a>
 
 
@@ -274,105 +278,8 @@
                                             </div>
 
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Deshmukh</td>
-                                            <td>Gaylord</td>
-                                            <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </td>
-                                            <td><div class="row">
-                                                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                                                    <div class="d-md-flex">
-                                                        <ol class="breadcrumb ml-auto">
-                                                        </ol>
-                                                        <a target="_blank" data-toggle="modal"  data-target="#editTopic" data-whatever="@getbootstrap"
-                                                           class="btn btn-outline-dark  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Edit</a>
-
-                                                        <a href="/deleteTopic"
-                                                           class="btn btn-outline-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Delete</a>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Sanghani</td>
-                                            <td>Gusikowski</td>
-                                            <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </td>
-                                            <td><div class="row">
-                                                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                                                    <div class="d-md-flex">
-                                                        <ol class="breadcrumb ml-auto">
-                                                        </ol>
-                                                        <a target="_blank" data-toggle="modal"  data-target="#editTopic" data-whatever="@getbootstrap"
-                                                           class="btn btn-outline-dark  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Edit</a>
-
-                                                        <a href="/deleteTopic"
-                                                           class="btn btn-outline-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Delete</a>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Roshan</td>
-                                            <td>Rogahn</td>
-                                            <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </td>
-                                            <td><div class="row">
-                                                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                                                    <div class="d-md-flex">
-                                                        <ol class="breadcrumb ml-auto">
-                                                        </ol>
-                                                        <a target="_blank" data-toggle="modal"  data-target="#editTopic" data-whatever="@getbootstrap"
-                                                           class="btn btn-outline-dark  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Edit</a>
-
-                                                        <a href="/deleteTopic"
-                                                           class="btn btn-outline-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Delete</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Joshi</td>
-                                            <td>Hickle</td>
-                                            <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </td>
-                                            <td><div class="row">
-                                                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                                                    <div class="d-md-flex">
-                                                        <ol class="breadcrumb ml-auto">
-                                                        </ol>
-                                                        <a target="_blank" data-toggle="modal"  data-target="#editTopic" data-whatever="@getbootstrap"
-                                                           class="btn btn-outline-dark  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Edit</a>
-
-                                                        <a href="/deleteTopic"
-                                                           class="btn btn-outline-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Delete</a>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Nigam</td>
-                                            <td>Eichmann</td>
-                                            <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
-                                            <td><div class="row">
-                                                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                                                    <div class="d-md-flex">
-                                                        <ol class="breadcrumb ml-auto">
-                                                        </ol>
-                                                        <a target="_blank" data-toggle="modal"  data-target="#editTopic" data-whatever="@getbootstrap"
-                                                           class="btn btn-outline-dark  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Edit</a>
-
-                                                        <a href="/deleteTopic"
-                                                           class="btn btn-outline-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Delete</a>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </tr>
+                                        </c:forEach>
+                                    </c:if>
                                     </tbody>
                                 </table>
                             </div>
@@ -403,7 +310,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="/addTopic" method="post">
+                            <form action="/addTopic" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Topic Name:</label>
                                     <input type="hidden" class="form-control" id="topicid" name="id">
@@ -414,17 +321,12 @@
                                     <textarea class="form-control" id="message-text" name="topicdescription"></textarea>
                                 </div>
                                 <div class="form-group">
-<%--                                <div class="row">--%>
-<%--                                    <form action="/uploadImages" method="post" enctype="multipart/form-data">--%>
-<%--                                        <div class="col-md-6">--%>
-<%--                                            <input type="hidden" class="form-control" id="id" name="id">--%>
-<%--                                            <input type="file" class="form-control" id="images" name="images[]" onchange="preview_images();" multiple/>--%>
-<%--                                        </div>--%>
-<%--                                        <div class="col-md-6">--%>
-<%--                                            <input type="submit" class="btn btn-primary" name='submit_image' value="Upload Topic Images"/>--%>
-<%--                                        </div>--%>
-<%--                                    </form>--%>
-<%--                                </div>--%>
+                                <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="hidden" class="form-control" id="id" name="id">
+                                            <input type="file" class="form-control" id="images" name="image" onchange="preview_images();" multiple/>
+                                        </div>
+                                </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row" id="image_preview"></div>
@@ -437,6 +339,7 @@
                         </form>
 
                     </div>
+
                 </div>
             </div>
 
@@ -454,19 +357,21 @@
                             <form action="/editTopic" method="post">
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Topic Name:</label>
-                                    <input type="hidden" class="form-control" id="id" name="id">
-                                    <input type="text" class="form-control" id="topic-name" name="name">
+                                    <input type="hidden" class="form-control" id="topic-id" name="topicid">
+                                    <input type="text" class="form-control" id="topic-name-edit" name="topicname">
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">Topic Description:</label>
-                                    <textarea class="form-control" id="topic-text" name="description"></textarea>
+                                    <textarea class="form-control" id="topic-desc-edit" name="topicdescription"></textarea>
                                 </div>
-                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Create</button>
+                            <button type="submit" class="btn btn-primary">Update</button>
                         </div>
+                        </form>
+
+                    </div>
                     </div>
                 </div>
             </div>
@@ -590,6 +495,68 @@
                 newElement.appendTo("#filediv");
             });
         }
+    });
+
+    $(document).on('click','.editButtonTopics',function (e) {
+        e.preventDefault();
+        var topicID = $(this).data('id');
+        console.log('topicID',topicID)
+        $.ajax({
+            url: "/getTopicById",
+            type: "get", //send it through get method
+            data: {
+                topicID: topicID
+            },
+            success: function (response) {
+
+                console.log('response',response)
+
+
+
+                var html="";
+                html += ' <div class="modal-body">';
+                html += ' <form action="/editTopic" method="post">';
+                html += ' <div class="form-group">';
+                html += ' <label for="recipient-name" class="col-form-label">Topic Name:'+response.topicname+'</label>';
+                html +=  '<input type="hidden" class="form-control" id="topicid" name="id">'
+                html += ' <input type="text" class="form-control" id="recipient-name" name="topicname">';
+                html += ' </div>';
+                html += ' <div class="form-group">';
+                html += ' <label for="message-text" class="col-form-label">Topic Description:'+response.topicdescription+'</label>';
+                html += ' <textarea class="form-control" id="message-text" name="topicdescription"></textarea>';
+                html += ' </div>';
+                html += ' <div class="form-group">';
+                html += ' <div class="row" id="image_preview"></div>';
+                html += ' </div>';
+                html += ' </div>';
+                html += ' <div class="modal-footer">';
+                html += ' <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>';
+                html += ' <button type="submit" class="btn btn-primary">Create</button>';
+                html += ' </div>';
+                html +=  '</form>';
+                html += ' </div>';
+
+                var topicname = response.topicname;
+                console.log('topicname:',topicname)
+                var topicDescription = response.topicdescription;
+                var topicId = response.topicid;
+
+                $('#topic-name-edit').val(topicname);
+                $('#topic-desc-edit').html(topicDescription);
+                $('#topic-id').val(topicId);
+                $('#editTopic').modal('show');
+
+                // Display Modal
+                // $('#viewComments').modal('show');
+
+
+
+            },
+            error: function (xhr) {
+                //Do Something to handle error
+            }
+        });
+
     });
 </script>
 </body>

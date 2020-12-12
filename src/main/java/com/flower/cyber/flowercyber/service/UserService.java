@@ -11,6 +11,5 @@ import java.util.List;
 public interface UserService {
     User addUser(User user);
     User editUser(User user);
-//    List<Users> getAllUsers();
     User getUserByID(int userID);
 }

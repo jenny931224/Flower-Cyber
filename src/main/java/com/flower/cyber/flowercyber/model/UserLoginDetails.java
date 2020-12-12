@@ -24,13 +24,11 @@ public class UserLoginDetails implements UserDetails {
     public void setUserid(int userid) {
         this.userid = userid;
     }
-//    private Collection<GrantedAuthority> authorities ;
 
     public UserLoginDetails() {
     }
 
     public UserLoginDetails(User user) {
-//        this.authorities = new ArrayList<GrantedAuthority>();
         this.user = user;
         this.username = user.getUserName();
         this.password = user.getPassword();
@@ -38,10 +36,7 @@ public class UserLoginDetails implements UserDetails {
         this.enabled = user.isEnabled();
         System.out.println("user.getAuthorities().size():"+user.getAuthorities().size());
         System.out.println("ROLE ::: "+user.getAuthorities().get(0).getAuthority());
-//        for(int i=0; i<user.getAuthorities().size();i++){
-//            System.out.println("getAuthority():"+user.getAuthorities().get(i).getAuthority());
-//
-//        }
+
     }
 
     @Override

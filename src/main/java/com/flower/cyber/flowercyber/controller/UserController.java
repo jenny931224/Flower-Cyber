@@ -1,9 +1,7 @@
 package com.flower.cyber.flowercyber.controller;
 
 import com.flower.cyber.flowercyber.model.User;
-import com.flower.cyber.flowercyber.repository.UserRepository;
 import com.flower.cyber.flowercyber.service.UserService;
-import com.flower.cyber.flowercyber.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,7 +18,6 @@ public class UserController {
 
     @RequestMapping("/addUser")
     public String addUser(User user){
-       // userRepository.save(user);
         return "dashboard";
     }
 

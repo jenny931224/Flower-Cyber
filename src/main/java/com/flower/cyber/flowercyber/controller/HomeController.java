@@ -1,6 +1,8 @@
 package com.flower.cyber.flowercyber.controller;
 
+import com.flower.cyber.flowercyber.model.FeedBack;
 import com.flower.cyber.flowercyber.model.Topic;
+import com.flower.cyber.flowercyber.repository.FeedBackRepository;
 import com.flower.cyber.flowercyber.service.TopicService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -28,16 +30,15 @@ public class HomeController {
     UserCommentService userCommentService;
 
     @Autowired
+    FeedBackRepository feedBackRepository;
+
+    @Autowired
     TopicService topicService;
 
     @RequestMapping("home")
     public ModelAndView getHome(@AuthenticationPrincipal UserLoginDetails user){
         modelHomepage = new ModelAndView("homepage");
         List<Topic> topics = topicService.getAllTopics();
-      //  List<UserComments> userComments = userCommentService.getCommentsByTopicId(1);
-  //      List<UserComments> userComments = userCommentService.getAllComments();
-
-  //      System.out.println("userComments.size() "+userComments.size());
 
         String role = null;
         if(user !=null){
@@ -50,7 +51,6 @@ public class HomeController {
         }
         modelHomepage.addObject("role",role);
         modelHomepage.addObject("topics",topics);
-    //    modelHomepage.addObject("comments",userComments);
 
         return modelHomepage;
     }
@@ -83,7 +83,6 @@ public class HomeController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "getCommentsByTopicID")
-
     public @ResponseBody List<UserComments> getCommentsByTopicID(@RequestParam int topicID){
         System.out.println("getCommentsByTopicID" + topicID);
 
@@ -100,6 +99,10 @@ public class HomeController {
         List<UserComments> userComments = userCommentService.getAllComments();
         ModelAndView model = new ModelAndView("dashboard");
 
+        List<FeedBack> feedbacks = feedBackRepository.findAll();
+
+        System.out.println("feedbacks.size "+feedbacks.size());
+
         int userid = 0;
         if(user !=null){
             System.out.println("user.getUserid():"+user.getUserid());
@@ -111,30 +114,9 @@ public class HomeController {
         }
         model.addObject("userid",userid);
         model.addObject("comments",userComments);
-        return model;
-    }
-
-//    @RequestMapping("/home")
-//    public String loadAdminDashboardProfile(){
-//        return "home";
-//    }
-
-    @RequestMapping("topics")
-    public ModelAndView loadAdminDashboardTopics(@AuthenticationPrincipal UserLoginDetails user){
-
-        ModelAndView model = new ModelAndView("topicspage");
-
-        int userid = 0;
-        if(user !=null){
-            System.out.println("user.getUserid():"+user.getUserid());
-            userid = user.getUserid();
-            System.out.println("userid from homeController ::: "+userid);
-
-        }else{
-            System.out.println("Empty User:");
-        }
-        model.addObject("userid",userid);
+        model.addObject("feedbacks",feedbacks);
 
         return model;
     }
+
 }

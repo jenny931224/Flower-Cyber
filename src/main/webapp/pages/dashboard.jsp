@@ -88,7 +88,7 @@
                     <!-- ============================================================== -->
                     <li>
                         <a class="profile-pic" href="#">
-                            <img src="./admin-dashboard/plugins/images/users/varun.jpg" alt="user-img" width="36"
+                            <img src="./admin-dashboard/plugins/images/users/d1.jpg" alt="user-img" width="36"
                                  class="img-circle"><span class="text-white font-medium">Jenny Rajakaruna</span></a>
                     </li>
                     <!-- ============================================================== -->
@@ -162,7 +162,7 @@
                     <div class="d-md-flex">
                         <ol class="breadcrumb ml-auto">
                         </ol>
-                        <a href="/home" target="_blank"
+                        <a href="/home"
                            class="btn btn-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Back to Home</a>
                     </div>
                 </div>
@@ -183,12 +183,13 @@
             <!-- ============================================================== -->
             <!-- Recent Comments -->
             <!-- ============================================================== -->
-            <c:if test="${comments != null and comments.size()>0}">
             <div class="row">
                 <!-- .col -->
                 <div class="col-md-12 col-lg-8 col-sm-12">
                     <div class="white-box">
                         <h3 class="box-title mb-0">Recent Comments</h3>
+                        <c:if test="${comments != null and comments.size()>0}">
+
                         <div class="comment-center">
                             <c:forEach items="${comments}" var="comment">
 
@@ -207,40 +208,10 @@
                                 </div>
                             </c:forEach>
 
-                                <%--<div class="comment-body d-flex">
-                                    <div class="user-img"> <img src="plugins/images/users/sonu.jpg" alt="user"
-                                            class="img-circle">
-                                    </div>
-                                    <div class="mail-contnet">
-                                        <h5>Sonu Nigam</h5><span class="time">10:20 AM 20 may 2016</span>
-                                        <br>
-                                        <div class="mb-3 mt-3">
-                                            <span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque
-                                                pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui
-                                                pellentesque molestie feugiat. Aenean commodo dui </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment-body d-flex border-0">
-                                    <div class="user-img"> <img src="plugins/images/users/arijit.jpg" alt="user"
-                                            class="img-circle">
-                                    </div>
-                                    <div class="mail-contnet">
-                                        <h5>Arijit singh</h5><span class="time">10:20 AM 20 may 2016</span>
-                                        <br>
-                                        <div class="mb-3 mt-3">
-                                            <span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque
-                                                pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui
-                                                pellentesque molestie feugiat. Aenean commodo dui </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>--%>
-                            <!-- /.col -->
                         </div>
                         </c:if>
+
+
                     </div>
                     <!-- ============================================================== -->
                     <!-- End Container fluid  -->
@@ -254,6 +225,40 @@
                     <!-- ============================================================== -->
                 </div>
 
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="card-heading">
+                            USER FEEDBACK
+                        </div>
+                        <c:if test="${feedbacks != null and feedbacks.size()>0}">
+                        <div class="card-body">
+                            <c:forEach items="${feedbacks}" var="feedbacks">
+                            <ul class="chatonline">
+                                <li>
+                                    <div class="call-chat">
+                                        <button class="btn btn-success text-white btn-circle btn" type="button">
+                                            <i class="fas fa-phone"></i>
+                                        </button>
+                                        <button class="btn btn-info btn-circle btn" type="button">
+                                            <i class="far fa-comments"></i>
+                                        </button>
+                                    </div>
+                                    <a href="javascript:void(0)" class="d-flex align-items-center"><img
+                                            src="plugins/images/users/varun.jpg" alt="user-img" class="img-circle">
+                                        <div class="ml-2">
+                                                <span class="text-dark text-muted">${feedbacks.username}
+                                                    <span
+                                                        class="d-block text-success d-block">${feedbacks.description}</span></span>
+                                            <span class="text-dark text-muted"><strong>Email : </strong>${feedbacks.email}</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            </c:forEach>
+                        </div>
+                        </c:if>
+                    </div>
+                </div>
 
                 <!-- ============================================================== -->
                 <!-- End Page wrapper  -->
